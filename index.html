@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColorPicker</title>
+</head>
+<body>
+    <div name="ColourPicker" class="component">
+        <div style="text-align: center;">RGB PICKER<br><br></div>
+      <div>
+        
+      <div>
+          <div class="row">
+          <div id="output">
+            
+          </div>
+          </div>
+          </div>
+              <ul name="rgb">
+                  <br><br>
+                  <li name="r">
+                      <label style="color:red">R </label> <input type="range" min="0" max="255" value="50" onchange="mix(event)" id="r" type="number" />
+                  </li>
+                  <li name="g">
+                      <label style="color:green">G </label> <input type="range" min="0" max="255" value="50" onchange="mix(event)" id="g" type="number"/>
+                  </li>
+                  <li name="b">
+                      <label style="color:blue">B </label> <input type="range" min="0" max="255" value="50" onchange="mix(event)" id="b" type="number"/>
+                  </li>
+                  <li name="hex">
+                      <label># </label> <span id="hex"></span>
+                  </li>
+                  <li name="hex">
+                    <label></label> <span id="no"></span>
+                </li>
+              </ul>
+             
+          </div>
+      </div>
+      <script>
+
+        const mix = (event) =>
+        {
+            // event.preventDefault();
+            var r=parseInt(document.getElementById("r").value);
+            var g=parseInt(document.getElementById("b").value);
+            var b=parseInt(document.getElementById("g").value);
+            color ='rgb(' + r + ',' + g + ',' + b + ')'
+            console.log(color)
+            var hexstr=""+r.toString(16)+""+g.toString(16)+""+b.toString(16);
+            document.getElementById("output").style.backgroundColor='rgb(' + r + ',' + g + ',' + b + ')';
+            document.getElementById("hex").textContent=hexstr;
+            
+            document.getElementById("no").textContent=color;
+        }
+
+        var red = document.querySelector("#r");
+        red.addEventListener("input",mix);
+        var green = document.querySelector("#g");
+        red.addEventListener("input",mix);
+        var blue = document.querySelector("#b");
+        red.addEventListener("input",mix);
+       
+       </script>
+</body>
+
+</html>

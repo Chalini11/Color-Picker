@@ -1,0 +1,106 @@
+body{
+    font-family: 'Proxima Nova', sans-serif;
+    background:#222;
+    color:rgba(255,255,255,0.9);
+}
+
+#output {
+    border: 2.5px solid #5a5656;
+    background-color: white;
+    margin:4px;
+    height: 10rem;
+    width: 15rem;
+    border-radius:20px;
+  }
+[name=ColourPicker].component {
+    border: 1px solid #222;
+    display: table;
+    margin: 1% auto;
+    padding: 8px;
+    font-family: 'Proxima Nova', sans-serif;
+    font-weight: bolder;
+}
+
+
+[name=base] {
+	max-width: 25px;
+  cursor: ns-resize;
+  border-radius: 8px;
+}
+.row {
+	display: flex;
+}
+.below{
+  display: grid;
+}
+
+[name=output] {
+	height: 50px;
+  border-radius: 10px;
+}
+
+[name=rgb] {
+	list-style: none;
+	margin: 0;
+	padding: 0 0 0 9px;
+}
+
+[name=rgb] li {
+	padding: 7px;
+}
+
+[name=rgb] li label {
+	width: 20px;
+	display: inline-block;
+}
+
+[name=rgb] li input {
+	padding: 8px 4px;
+  border-radius: 8px;
+  border:0;
+}
+
+#r{
+  -webkit-appearance: none;
+  height: 1px;
+  width: 4cm;
+  border-radius: 5px;
+  background: red;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+#g{
+  -webkit-appearance: none;
+  height: 1px;
+  width: 4cm;
+  border-radius: 5px;
+  background: green;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+#b{
+  
+  -webkit-appearance: none;
+  width: 4cm;
+  height: 1px;
+  border-radius: 5px;
+  background: blue;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+
+}
+#r::-webkit-slider-thumb,#b::-webkit-slider-thumb,#g::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+}
